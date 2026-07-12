@@ -68,6 +68,11 @@ nav li a {
 dl dt{
     font-weight: bold;
 }
+/* Staff display */
+.staff-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 /* Main */
 main {
     min-height: 70vh;
