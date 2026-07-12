@@ -4,7 +4,11 @@ body, header, nav, main, footer, img, h1, h2, ul, div, a, p {
     padding: 0;
     border: 0;
 }
-
+main{
+   width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;}
 /* General Styles */
 body {
     background-color: #f6eee4;
@@ -51,7 +55,19 @@ nav li a {
     padding: 0.5em 2em;
     text-decoration: none;
 }
-
+/* Products display */
+.products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.product-card{
+    border: 1px #2a1f14;
+    border-radius: 9px;
+    padding: 12px;
+}
+dl dt{
+    font-weight: bold;
+}
 /* Main */
 main {
     min-height: 70vh;
