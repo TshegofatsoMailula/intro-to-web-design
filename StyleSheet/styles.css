@@ -1,22 +1,45 @@
+*{
+    box-sizing: border-box;
+}
 /* CSS Reset */
 body, header, nav, main, footer, img, h1, h2, ul, div, a, p {
     margin: 0;
     padding: 0;
     border: 0;
 }
-main{
-   width: 100%;
+main {
+    width: 100%;
     max-width: 1200px;
+    min-height: 70vh;
     margin: 0 auto;
-    padding: 0 1rem;}
-/* General Styles */
-body {
-    background-color: #f6eee4;
-    font-family: Geneva, Arial, sans-serif;
+    padding: 2em;
+    background-color: #ffffff;
+    font-size: 1.1em;
 }
 
-/* Header */
+/*Make images responsive*/
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Change background color of the body tag */
+body {
+    background-color: #f6eee4;
+}
+
+/* Position the elements relative to body */
+body{
+    position: relative;
+}
+
+/* Style rule for sticky header */
 header {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: sticky;
     background-color: #78593a;
 }
 
@@ -46,7 +69,7 @@ nav li {
     display: block;
     font-size: 1.5em;
     font-weight: bold;
-    border-top: 0.5px solid #f6eee4;
+    border-top: none;
 }
 
 nav li a {
@@ -55,15 +78,19 @@ nav li a {
     padding: 0.5em 2em;
     text-decoration: none;
 }
+
 /* Products display */
 .products{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 .product-card{
-    border: 1px #2a1f14;
-    border-radius: 9px;
+    border: 1px solid #2a1f14;
     padding: 12px;
+
+}
+.round{
+    border-radius: 6px;
 }
 dl dt{
     font-weight: bold;
@@ -71,15 +98,24 @@ dl dt{
 /* Staff display */
 .staff-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
-/* Main */
-main {
-    min-height: 70vh;
-    padding: 2em;
+figure {
+    margin: 0;
+    padding: 1em;
+    border: 1px solid #2a1f14;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f6eee4;
+}
+figcaption {
+    margin-top: 1em;
+    font-size: 0.95em;
+    font-style: italic;
+    color: #2a1f14;
 }
 
-/* Footer */
+/* Style rule for footer element */
 footer {
     text-align: center;
     font-size: 0.85em;
@@ -95,6 +131,86 @@ footer a {
     margin: 0.3em 0;
 }
 
+/*Style rule for external link class*/
+.external-link{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/*Style rule for map class*/
+.map{
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* Style rule for hours class*/
+.hours{
+    list-style-type: square;
+}
+
+.hours li{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 0.5px solid #000 ;
+    padding: 9px;
+}
+.link{
+    text-decoration: none;
+    color: #000;
+}
+.tel-link a{
+    color: #fff;
+}
+.tel-link{
+    background-color: #2a1f14;
+    padding: 2%;
+    margin: 0 auto;
+}
+/* Products page IDs */
+
+#products-main {
+    padding: 2em;
+    background-color: #f9f9f9;
+}
+
+#products-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    margin-bottom: 2em;
+}
+
+#products-info {
+    text-align: center;
+    font-size: 1.1em;
+    font-style: italic;
+}
+/* Contact page IDs */
+
+#contact-main {
+    padding: 2em;
+    background-color: #f9f9f9;
+}
+
+#map {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+#contact-info {
+    background-color: #ffffff;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    border-radius: 8px;
+}
+
+#operating-hours {
+    background-color: #f3f3f3;
+    padding: 1.5em;
+    border-radius: 8px;
+}
 /*
    Tablet Viewport */
 @media screen and (min-width: 620px), print {
@@ -146,6 +262,10 @@ footer a {
         display: inline-block;
         margin: 0 1em;
     }
+    .products{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 }
 
 /*
@@ -168,6 +288,15 @@ footer a {
     #info ul {
         margin-left: 5%;
     }
+    .products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.staff-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 }
 
 /*
